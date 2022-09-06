@@ -1,12 +1,12 @@
 from fastapi import FastAPI
 
-from hotel.db.engine import DBSession, init_db
-from hotel.db.models import DBRoom
+from products.db.engine import DBSession, init_db
+from products.db.models import DBRoom
 
 app = FastAPI()
 
 
-DB_FILE = "sqlite:///hotel.db"
+DB_FILE = "sqlite:///products.db"
 
 
 @app.on_event("startup")
