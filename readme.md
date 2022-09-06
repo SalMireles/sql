@@ -83,25 +83,29 @@ Complete workthrough of the book SamsTeachYourself SQL in 10 Minutes.
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* python 3.10.0 via pyenv
+####Installation
+* python 3.8.10 via pyenv
   ```sh
-  pyenv install 3.10.0
+  pyenv install 3.8.10
   ```
-
-### Installation and Usage
-
-1. Get a free API Key at [https://WIP.com](https://example.com)
-2. Clone the repo
+* Clone the repo
    ```sh
-   git clone https://github.com/SalMireles/simple-booking-api
+   git clone https://github.com/SalMireles/sql
    ```
-3. Install packages
+
+####Usage
+
+1. Install packages
    ```sh
-   poetry install
+   make install
    ```
-4. Boot the app
+2. Boot the app
    ```sh
-   flask run
+   make run
+   ```
+2. Run endpoint commands
+   ```sh
+   make get endpoint="<endpoint_name>" OR curl -X GET http://localhost:8000/<endpoint_name>
    ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
