@@ -15,7 +15,7 @@ class DBCustomer(Base):
     email_address = Column(String(250), nullable=False)
 
 
-class DBRoom(Base):
+class DBProducts(Base):
     __tablename__ = "room"
     id = Column(Integer, primary_key=True, autoincrement=True)
     number = Column(String(250), nullable=False)
@@ -33,4 +33,4 @@ class DBBooking(Base):
     customer_id = Column(Integer, ForeignKey("customer.id"))
     customer = relationship(DBCustomer)
     room_id = Column(Integer, ForeignKey("room.id"))
-    room: relationship(DBRoom)
+    room: relationship(DBProducts)

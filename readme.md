@@ -97,7 +97,14 @@ Complete workthrough of the book SamsTeachYourself SQL in 10 Minutes.
    ```
 2. Run endpoint commands
    ```sh
-   make get endpoint="<endpoint_name>" OR curl -X GET http://localhost:8000/<endpoint_name>
+   make get endpoint="<endpoint_name>" OR 
+   curl -X GET http://127.0.0.1:8000/<endpoint_name>
+   ```
+   Examples:
+   ```python
+   make get endpoint=""
+   make get endpoint="products"
+   curl -X GET http://127.0.0.1:8000/products
    ```
 
 <!-- Notes -->

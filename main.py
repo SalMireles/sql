@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
 from products.db.engine import DBSession, init_db
-from products.db.models import DBRoom
+from products.db.models import DBProducts
 
 app = FastAPI()
 
@@ -19,8 +19,8 @@ def read_root():
     return "The server is running."
 
 
-@app.get("/rooms")
-def read_all_rooms():
+@app.get("/products")
+def read_all_products():
     session = DBSession()
-    rooms = session.query(DBRoom).all()
-    return rooms
+    products = session.query(DBProducts).all()
+    return products
